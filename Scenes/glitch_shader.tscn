@@ -6,9 +6,9 @@
 shader = ExtResource("1_yclbt")
 shader_parameter/shake_power = 0.03
 shader_parameter/shake_rate = 1.0
-shader_parameter/shake_speed = 50.0
-shader_parameter/shake_block_size = 30.5
-shader_parameter/shake_color_rate = 0.030000001425
+shader_parameter/shake_speed = 25.0
+shader_parameter/shake_block_size = 20.0
+shader_parameter/shake_color_rate = 0.01
 
 [node name="GlitchShader" type="Control" unique_id=166881817]
 layout_mode = 3

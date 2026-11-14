@@ -30,7 +30,3 @@ func _on_body_entered(body: Node2D) -> void:
 		# 2. Jouer l'animation (1 seule fois)
 		if _sprite:
 			_sprite.play() # Remplace par le nom de l'animation
-			
-			# Si tu veux la figer sur une frame précise :
-			# _sprite.pause()
-			# _sprite.frame = 0

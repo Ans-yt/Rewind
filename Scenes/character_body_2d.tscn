@@ -64,8 +64,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_2ycd3"]
-
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1451499981]
 script = ExtResource("1_ij6vw")
 metadata/_edit_group_ = true
@@ -80,9 +78,6 @@ shape = SubResource("RectangleShape2D_2ycd3")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1835180803]
 sprite_frames = SubResource("SpriteFrames_2ycd3")
 frame_progress = 0.91379625
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=417576877]
-texture = SubResource("AnimatedTexture_2ycd3")
 
 [node name="GlitchShader" parent="." unique_id=166881817 instance=ExtResource("3_ghijl")]
 visible = false

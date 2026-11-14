@@ -12,8 +12,10 @@ metadata/_edit_group_ = true
 z_index = -2
 scale = Vector2(2.148966, 2.1400902)
 scroll_scale = Vector2(0.4, 0.4)
-scroll_offset = Vector2(-1.4313761, 16.543547)
+scroll_offset = Vector2(13.598073, 1.4385693)
 repeat_size = Vector2(369.005, 0)
+repeat_times = 11
+metadata/_edit_lock_ = true
 
 [node name="Clouds" type="Sprite2D" parent="Parallax2D2" unique_id=386261763]
 scale = Vector2(0.19233511, 0.1923351)
@@ -25,7 +27,7 @@ scale = Vector2(0.6978475, 6.9736915)
 scroll_scale = Vector2(0.2, 0.2)
 scroll_offset = Vector2(175.34358, 0.7192993)
 repeat_size = Vector2(300, 0)
-repeat_times = 11
+repeat_times = 100
 
 [node name="Sky" type="Sprite2D" parent="Parallax2D" unique_id=1728605139]
 scale = Vector2(0.1923351, 0.1923351)
@@ -35,9 +37,9 @@ texture = ExtResource("2_8ntqg")
 z_index = -1
 scale = Vector2(2.2672024, 3.6609952)
 scroll_scale = Vector2(0.35, 0.35)
-scroll_offset = Vector2(-51.52954, 48.91136)
+scroll_offset = Vector2(-834.4923, 4.7683716e-07)
 repeat_size = Vector2(368.005, 0)
-repeat_times = 2
+repeat_times = 11
 
 [node name="Hills" type="Sprite2D" parent="Parallax2D3" unique_id=1646630495]
 scale = Vector2(0.19233511, 0.1923351)

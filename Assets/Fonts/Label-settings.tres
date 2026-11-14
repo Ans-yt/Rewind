@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://bdn32us3ujmv5"]
+
+[ext_resource type="FontFile" uid="uid://b3pets4pemoiw" path="res://Assets/Fonts/Yoster-Island/yoster.ttf" id="1_l816l"]
+
+[resource]
+line_spacing = 2.86
+font = ExtResource("1_l816l")
+font_size = 79
