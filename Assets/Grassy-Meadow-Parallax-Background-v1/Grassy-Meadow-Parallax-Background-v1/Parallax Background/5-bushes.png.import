@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqapt15rcg5cx"
-path="res://.godot/imported/Assets.png-557f02a04ddd8e5e5bd2098b09eedd54.ctex"
+uid="uid://bg1rkbfxk7hfm"
+path="res://.godot/imported/5-bushes.png-11885039754115cf9458451b45e81b0e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tiles/Assets/Assets.png"
-dest_files=["res://.godot/imported/Assets.png-557f02a04ddd8e5e5bd2098b09eedd54.ctex"]
+source_file="res://Assets/Grassy-Meadow-Parallax-Background-v1/Grassy-Meadow-Parallax-Background-v1/Parallax Background/5-bushes.png"
+dest_files=["res://.godot/imported/5-bushes.png-11885039754115cf9458451b45e81b0e.ctex"]
 
 [params]
 

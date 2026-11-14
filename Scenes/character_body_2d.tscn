@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://btxf2yyniqhbi"]
 
 [ext_resource type="Script" uid="uid://cpgy43uo6nog6" path="res://Scripts/player.gd" id="1_ij6vw"]
-[ext_resource type="Texture2D" uid="uid://baxxdvl06fu5b" path="res://Sprites/walk1.png" id="2_ghijl"]
-[ext_resource type="PackedScene" uid="uid://bqifaiedjow60" path="res://glitch_shader.tscn" id="3_ghijl"]
+[ext_resource type="Texture2D" uid="uid://baxxdvl06fu5b" path="res://Assets/Sprites/walk1.png" id="2_ghijl"]
+[ext_resource type="PackedScene" uid="uid://bqifaiedjow60" path="res://Scenes/glitch_shader.tscn" id="3_ghijl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2ycd3"]
 size = Vector2(20, 36)
@@ -69,10 +69,6 @@ animations = [{
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1451499981]
 script = ExtResource("1_ij6vw")
 metadata/_edit_group_ = true
-
-[node name="s" type="Camera2D" parent="." unique_id=429482206]
-position = Vector2(-19, 56)
-zoom = Vector2(1.53, 1.53)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1551642455]
 physics_interpolation_mode = 1

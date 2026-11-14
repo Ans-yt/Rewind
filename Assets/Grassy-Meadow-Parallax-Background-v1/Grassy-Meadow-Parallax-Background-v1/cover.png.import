@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://baxxdvl06fu5b"
-path="res://.godot/imported/walk1.png-7a7db7c7b3b5cfffe2b3dbc3ddcba262.ctex"
+uid="uid://vttf6v6gtwgy"
+path="res://.godot/imported/cover.png-d8d2acc5ad7569ad0422d8dd76a8ccf8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/walk1.png"
-dest_files=["res://.godot/imported/walk1.png-7a7db7c7b3b5cfffe2b3dbc3ddcba262.ctex"]
+source_file="res://Assets/Grassy-Meadow-Parallax-Background-v1/Grassy-Meadow-Parallax-Background-v1/cover.png"
+dest_files=["res://.godot/imported/cover.png-d8d2acc5ad7569ad0422d8dd76a8ccf8.ctex"]
 
 [params]
 

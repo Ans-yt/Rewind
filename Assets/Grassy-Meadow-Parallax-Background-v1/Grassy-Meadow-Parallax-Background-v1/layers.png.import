@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cg26d8hmm1sbw"
-path="res://.godot/imported/entrance.png-69ee50ee60ab3ad38f3300260d652595.ctex"
+uid="uid://d000vy7s6cv1b"
+path="res://.godot/imported/layers.png-7fbca20ea1ebca7b52e396e5832ecc6c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tiles/Social/entrance.png"
-dest_files=["res://.godot/imported/entrance.png-69ee50ee60ab3ad38f3300260d652595.ctex"]
+source_file="res://Assets/Grassy-Meadow-Parallax-Background-v1/Grassy-Meadow-Parallax-Background-v1/layers.png"
+dest_files=["res://.godot/imported/layers.png-7fbca20ea1ebca7b52e396e5832ecc6c.ctex"]
 
 [params]
 

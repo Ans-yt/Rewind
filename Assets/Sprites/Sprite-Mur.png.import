@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bge8kwmc8brl"
-path="res://.godot/imported/Assets.png-7b53bd74921c3d9b7d18dd250fb9a1ef.ctex"
+uid="uid://cbxubgoanwqwu"
+path="res://.godot/imported/Sprite-Mur.png-fff433737607de386fe1c3264136c78c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tiles/Social/Assets.png"
-dest_files=["res://.godot/imported/Assets.png-7b53bd74921c3d9b7d18dd250fb9a1ef.ctex"]
+source_file="res://Assets/Sprites/Sprite-Mur.png"
+dest_files=["res://.godot/imported/Sprite-Mur.png-fff433737607de386fe1c3264136c78c.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ciln5jn1h6"
-path="res://.godot/imported/Background_2.png-c86f71a7e7b8f213ebc8faf54d9a781e.ctex"
+uid="uid://b3w8mut38yl8w"
+path="res://.godot/imported/1-sky.png-7c70f1b68ab7440f9fbaac945c9f5906.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tiles/Assets/Background_2.png"
-dest_files=["res://.godot/imported/Background_2.png-c86f71a7e7b8f213ebc8faf54d9a781e.ctex"]
+source_file="res://Assets/Grassy-Meadow-Parallax-Background-v1/Grassy-Meadow-Parallax-Background-v1/Parallax Background/1-sky.png"
+dest_files=["res://.godot/imported/1-sky.png-7c70f1b68ab7440f9fbaac945c9f5906.ctex"]
 
 [params]
 
