@@ -8,11 +8,10 @@ extends CharacterBody2D
 @export var boostIntensity := 10
 	
 @onready var dashCooldown : Timer = $DashCooldown
+@onready var _animated_sprite = $AnimatedSprite2D
+@onready var _glitch_shader = $GlitchShader
 
-
-func _ready() -> void :
-	dashCooldown.one_shot = true
-	dashCooldown.wait_time = 0.2
+# - - - - - -
 
 var positionsX = []
 var positionsY = []
@@ -20,19 +19,35 @@ var r = 0
 var i = 0
 var is_rewinding = true
 
-const MAX_HISTORY := 1200
+const MAX_HISTORY := 120
+
+# - - - - - -
+
+func _ready() -> void :
+	dashCooldown.one_shot = true
+	dashCooldown.wait_time = 0.2
+	_glitch_shader.visible = false
+
+
+# - - - - - -
+# - - - - - -
+# - - - - - -
 
 
 func _physics_process(delta: float) -> void:
 	
 	
-	var isRewind = Input.is_action_pressed("rewind") 
+	var isRewind = Input.is_action_pressed("rewind") and positionsX.size() == MAX_HISTORY
 	
-	if not isRewind :
+	if not isRewind:
 		if not is_rewinding : 
 			is_rewinding = true
 			r = 0
 			i = 0
+			_glitch_shader.visible = false
+			
+			
+			
 			
 		# 1) Gravité (Y+ = bas en Godot)
 		if not is_on_floor():
@@ -48,7 +63,13 @@ func _physics_process(delta: float) -> void:
 		
 		if direction != 0:
 			velocity.x = direction * speedX * (boostIntensity if dash else 1)
+			_animated_sprite.play()
+			var facing = sign(direction)
+			_animated_sprite.flip_h = facing < 0	
+			
 		else:
+			_animated_sprite.pause()
+
 			velocity.x *= friction   # ralentissement progressif
 		if dash : 
 			dashCooldown.start()
@@ -62,16 +83,21 @@ func _physics_process(delta: float) -> void:
 		# 4) Application
 		move_and_slide()
 		 
-	elif positionsX.size() - 1 != 0:
+	elif positionsX.size() - 1 >= 0:
 		if is_rewinding :
 			r = positionsX.size() - 1
 			is_rewinding = false
 			i = 0
+			_glitch_shader.visible = true
+			
 			
 		if r - i >= 0:
 			global_position.x = positionsX[r-i]
 			global_position.y = positionsY[r-i]
 			i+=1
+		else : 
+			positionsX = []
+			positionsY = []
 
 	
 	

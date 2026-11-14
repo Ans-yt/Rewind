@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://btxf2yyniqhbi"]
+
+[ext_resource type="Script" uid="uid://cpgy43uo6nog6" path="res://Scripts/player.gd" id="1_ij6vw"]
+[ext_resource type="Texture2D" uid="uid://baxxdvl06fu5b" path="res://Sprites/walk1.png" id="2_ghijl"]
+[ext_resource type="PackedScene" uid="uid://bqifaiedjow60" path="res://glitch_shader.tscn" id="3_ghijl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ycd3"]
+size = Vector2(20, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_juu6c"]
+atlas = ExtResource("2_ghijl")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7qrdq"]
+atlas = ExtResource("2_ghijl")
+region = Rect2(256, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w2ghw"]
+atlas = ExtResource("2_ghijl")
+region = Rect2(512, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3fwmn"]
+atlas = ExtResource("2_ghijl")
+region = Rect2(0, 256, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fg1dp"]
+atlas = ExtResource("2_ghijl")
+region = Rect2(256, 256, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5nvdp"]
+atlas = ExtResource("2_ghijl")
+region = Rect2(512, 256, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3x21c"]
+atlas = ExtResource("2_ghijl")
+region = Rect2(0, 512, 256, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2ycd3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_juu6c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7qrdq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w2ghw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3fwmn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fg1dp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5nvdp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3x21c")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_2ycd3"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1451499981]
+script = ExtResource("1_ij6vw")
+metadata/_edit_group_ = true
+
+[node name="s" type="Camera2D" parent="." unique_id=429482206]
+position = Vector2(-19, 56)
+zoom = Vector2(1.53, 1.53)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1551642455]
+physics_interpolation_mode = 1
+position = Vector2(0, 46.5316)
+shape = SubResource("RectangleShape2D_2ycd3")
+
+[node name="DashCooldown" type="Timer" parent="." unique_id=794515234]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1835180803]
+sprite_frames = SubResource("SpriteFrames_2ycd3")
+frame_progress = 0.91379625
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=417576877]
+texture = SubResource("AnimatedTexture_2ycd3")
+
+[node name="GlitchShader" parent="." unique_id=166881817 instance=ExtResource("3_ghijl")]
+visible = false
+offset_left = -31.0
+offset_top = 37.0
+offset_right = -31.0
+offset_bottom = 37.0
