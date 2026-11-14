@@ -4,9 +4,9 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2ycd3"]
 shader = ExtResource("1_yclbt")
-shader_parameter/shake_power = 0.3
-shader_parameter/shake_rate = 0.2
-shader_parameter/shake_speed = 5.0
+shader_parameter/shake_power = 0.03
+shader_parameter/shake_rate = 1.0
+shader_parameter/shake_speed = 50.0
 shader_parameter/shake_block_size = 30.5
 shader_parameter/shake_color_rate = 0.030000001425
 
