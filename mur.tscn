@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://1kjfhu7fg5vi"]
+
+[ext_resource type="Texture2D" uid="uid://cbxubgoanwqwu" path="res://Assets/Sprites/Sprite-Mur.png" id="1_cakvo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cv1qa"]
+size = Vector2(7.965088, 63.480206)
+
+[node name="Mur" type="StaticBody2D" unique_id=358305942]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=965332167]
+position = Vector2(1746.5964, 9.740097)
+scale = Vector2(1.859, 1)
+shape = SubResource("RectangleShape2D_cv1qa")
+
+[node name="Mur" type="Sprite2D" parent="." unique_id=1576648289]
+z_index = -1
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(1747, 12.000015)
+rotation = -3.1415925
+scale = Vector2(0.9329067, -0.94915044)
+texture = ExtResource("1_cakvo")

@@ -1,11 +1,13 @@
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 extends CharacterBody2D
 
+@export var respawnPoint : Vector2 = Vector2(250,250)
 @export var speedX := 400.0
 @export var jump_force := 600.0
 @export var gravity := 1500.0
 @export var friction := 0.85   # ralentissement au sol
 @export var boostIntensity := 10
+	
 	
 @onready var dashCooldown : Timer = $DashCooldown
 @onready var _animated_sprite = $AnimatedSprite2D
@@ -28,6 +30,9 @@ func _ready() -> void :
 	dashCooldown.wait_time = 0.2
 	_glitch_shader.visible = false
 
+	# a decomenter avant de BUILD
+	# respawn()
+
 
 # - - - - - -
 # - - - - - -
@@ -35,7 +40,8 @@ func _ready() -> void :
 
 
 func _physics_process(delta: float) -> void:
-	
+	if Input.is_action_just_pressed("Respawn") :
+		respawn()
 	
 	var isRewind = Input.is_action_pressed("rewind") and positionsX.size() == MAX_HISTORY
 	
@@ -45,9 +51,6 @@ func _physics_process(delta: float) -> void:
 			r = 0
 			i = 0
 			_glitch_shader.visible = false
-			
-			
-			
 			
 		# 1) Gravité (Y+ = bas en Godot)
 		if not is_on_floor():
@@ -89,8 +92,7 @@ func _physics_process(delta: float) -> void:
 			is_rewinding = false
 			i = 0
 			_glitch_shader.visible = true
-			
-			
+						
 		if r - i >= 0:
 			global_position.x = positionsX[r-i]
 			global_position.y = positionsY[r-i]
@@ -99,5 +101,11 @@ func _physics_process(delta: float) -> void:
 			positionsX = []
 			positionsY = []
 
+
+# - - - -
+
+func respawn() -> void :
+	global_position = respawnPoint
 	
-	
+	positionsX = []
+	positionsY = []
