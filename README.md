@@ -2,11 +2,11 @@
 
 
 
-<u>Assets used :</u>
+### <ins> Assets used </ins>
 
 
 
-\*\*fonts\*\* : Yoster Island by codeman38 (https://www.1001fonts.com/yoster-island-font.html)
+**fonts** : Yoster Island by codeman38 (https://www.1001fonts.com/yoster-island-font.html)
 
-\*\*tilesets\*\* :
+**tilesets** :
 
