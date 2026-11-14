@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bk1m732e2q4lp"]
+
+[ext_resource type="Script" uid="uid://dfwwuwl74mt32" path="res://Scripts/ennemi_1.gd" id="1_aa601"]
+[ext_resource type="Texture2D" uid="uid://cactn78cmum03" path="res://Assets/Sprites/Sprite-temporaire-ennemi-1.png" id="1_jjn1c"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2ycd3"]
+radius = 21.0
+height = 66.0
+
+[node name="Ennemi1" type="CharacterBody2D" unique_id=1067661198]
+script = ExtResource("1_aa601")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1035220506]
+texture = ExtResource("1_jjn1c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=483471086]
+position = Vector2(-4, 1)
+shape = SubResource("CapsuleShape2D_2ycd3")
