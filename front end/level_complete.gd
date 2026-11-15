@@ -16,9 +16,11 @@ func show_next_level() -> void:
 	$Overlay/Message.text = "Next level placeholder.\nMore to come!"
 	$Overlay/Next.text = "Coming soon"
 	$Overlay/Next.disabled = true
+	leave_screen("res://Scenes/level_2.tscn")
+	
 
 func replay_level() -> void:
-	leave_screen("res://rewind.tscn")
+	leave_screen("res://rewind.ts-1cn")
 
 func return_to_menu() -> void:
 	leave_screen("res://front end/menu.tscn")

@@ -8,7 +8,7 @@ size = Vector2(7.965088, 63.480206)
 [node name="Mur" type="StaticBody2D" unique_id=358305942]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=965332167]
-position = Vector2(1746.5964, 9.740097)
+position = Vector2(16.059692, -34.8871)
 scale = Vector2(1.859, 1)
 shape = SubResource("RectangleShape2D_cv1qa")
 
@@ -16,7 +16,7 @@ shape = SubResource("RectangleShape2D_cv1qa")
 z_index = -1
 texture_filter = 1
 texture_repeat = 1
-position = Vector2(1747, 12.000015)
+position = Vector2(16.463257, -32.627182)
 rotation = -3.1415925
 scale = Vector2(0.9329067, -0.94915044)
 texture = ExtResource("1_cakvo")

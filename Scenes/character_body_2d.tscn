@@ -66,12 +66,6 @@ animations = [{
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1451499981]
 script = ExtResource("1_ij6vw")
-respawnPoint = null
-speedX = null
-jump_force = null
-gravity = null
-friction = null
-boostIntensity = null
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1551642455]

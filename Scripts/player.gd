@@ -1,14 +1,15 @@
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 extends CharacterBody2D
 
-@export var respawnPoint : Vector2 = Vector2(250,250)
+#@export var respawnPoint : Vector2 = Vector2(250,250)
 @export var speedX := 400.0
 @export var jump_force := 600.0
 @export var gravity := 1500.0
 @export var friction := 0.85   # ralentissement au sol
 @export var boostIntensity := 10
+
 	
-	
+@onready var _collision_shape = $CollisionShape2D
 @onready var dashCooldown : Timer = $DashCooldown
 @onready var _animated_sprite = $AnimatedSprite2D
 @onready var _glitch_shader = $GlitchShader
@@ -22,16 +23,18 @@ var i = 0
 var is_rewinding = true
 
 const MAX_HISTORY := 120
-
+var respawn_position: Vector2
 # - - - - - -
 
 func _ready() -> void :
 	dashCooldown.one_shot = true
 	dashCooldown.wait_time = 0.2
 	_glitch_shader.visible = false
+	respawn_position = global_position # On sauvegarde la position de départ
 
 	# a decomenter avant de BUILD
 	# respawn()
+
 
 
 # - - - - - -
@@ -51,6 +54,7 @@ func _physics_process(delta: float) -> void:
 			r = 0
 			i = 0
 			_glitch_shader.visible = false
+			_collision_shape.set_deferred("disabled", false)
 			
 		# 1) Gravité (Y+ = bas en Godot)
 		if not is_on_floor():
@@ -92,6 +96,7 @@ func _physics_process(delta: float) -> void:
 			is_rewinding = false
 			i = 0
 			_glitch_shader.visible = true
+			_collision_shape.set_deferred("disabled", true) 
 						
 		if r - i >= 0:
 			global_position.x = positionsX[r-i]
@@ -105,7 +110,9 @@ func _physics_process(delta: float) -> void:
 # - - - -
 
 func respawn() -> void :
-	global_position = respawnPoint
-	
+	#if Input.is_action_just_pressed("Respawn") : 
+	velocity = Vector2.ZERO # On arrête son mouvement
+	global_position = respawn_position
 	positionsX = []
 	positionsY = []
+	get_tree().reload_current_scene()

@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://wchxkvjrn837"]
+
+[ext_resource type="Script" uid="uid://otfkholkijm1" path="res://Scripts/button.gd" id="1_lsiiv"]
+[ext_resource type="Texture2D" uid="uid://brgeec1f0syyh" path="res://Assets/Sprites/Sprite-bouton-anime1.png" id="2_1uile"]
+[ext_resource type="Texture2D" uid="uid://bkuvws5xqfhao" path="res://Assets/Sprites/Sprite-bouton-anime2.png" id="3_nwbfq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vcilj"]
+size = Vector2(14.188904, 9.291794)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bl0du"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_1uile")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_nwbfq")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Bouton" type="Area2D" unique_id=1298347701 node_paths=PackedStringArray("_sprite")]
+scale = Vector2(2.625978, 1.4120167)
+script = ExtResource("1_lsiiv")
+_sprite = NodePath("AnimatedSprite2D")
+move_offset = Vector2(0, 75)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=214291522]
+physics_interpolation_mode = 1
+position = Vector2(3.8081055, 9.914886)
+scale = Vector2(1.0000001, 1)
+shape = SubResource("RectangleShape2D_vcilj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=497842832]
+texture_filter = 1
+position = Vector2(3.8081665, 0.7082062)
+scale = Vector2(0.44691846, 0.83115023)
+sprite_frames = SubResource("SpriteFrames_bl0du")
