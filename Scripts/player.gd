@@ -27,6 +27,8 @@ var respawn_position: Vector2
 # - - - - - -
 
 func _ready() -> void :
+	add_to_group("Player")
+	add_to_group("player")
 	dashCooldown.one_shot = true
 	dashCooldown.wait_time = 0.2
 	_glitch_shader.visible = false
@@ -115,4 +117,8 @@ func respawn() -> void :
 	global_position = respawn_position
 	positionsX = []
 	positionsY = []
-	get_tree().reload_current_scene()
+	var main := get_tree().current_scene
+	if main.has_method("restart_level"):
+		main.call_deferred("restart_level")
+	else:
+		get_tree().reload_current_scene()

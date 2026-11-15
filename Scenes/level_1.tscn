@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://wv331ir5bo01"]
+[gd_scene format=3 uid="uid://wv331ir5bo01"]
 
 [ext_resource type="PackedScene" uid="uid://btxf2yyniqhbi" path="res://Scenes/character_body_2d.tscn" id="1_af3po"]
 [ext_resource type="PackedScene" path="res://Scenes/player_sounds.tscn" id="2_uy8f0"]

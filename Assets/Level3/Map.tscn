@@ -1,0 +1,700 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="PackedScene" path="Layer_0_0.tscn" id="1"]
+[ext_resource type="PackedScene" path="TerrainFill.tscn" id="2"]
+[ext_resource type="Texture2D" path="Assets.png" id="3"]
+
+[node name="map" type="Node2D"]
+texture_filter = 1
+
+[node name="TerrainFill" parent="." instance=ExtResource("2")]
+
+[node name="Layer_0_0" parent="." instance=ExtResource("1")]
+
+[node name="Decorations" type="Node2D" parent="."]
+
+[node name="Fern_000" type="Sprite2D" parent="Decorations"]
+position = Vector2(128, 32)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(208, 0, 16, 16)
+
+[node name="Fern_001" type="Sprite2D" parent="Decorations"]
+position = Vector2(160, 32)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(208, 0, 16, 16)
+
+[node name="Fern_002" type="Sprite2D" parent="Decorations"]
+position = Vector2(256, 32)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(208, 0, 16, 16)
+
+[node name="Fern_003" type="Sprite2D" parent="Decorations"]
+position = Vector2(352, 32)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(208, 0, 16, 16)
+
+[node name="Fern_004" type="Sprite2D" parent="Decorations"]
+position = Vector2(400, 32)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(208, 0, 16, 16)
+
+[node name="Fern_005" type="Sprite2D" parent="Decorations"]
+position = Vector2(576, 32)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(208, 0, 16, 16)
+
+[node name="Fern_006" type="Sprite2D" parent="Decorations"]
+position = Vector2(624, 32)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(208, 0, 16, 16)
+
+[node name="Fern_007" type="Sprite2D" parent="Decorations"]
+position = Vector2(800, 48)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(208, 0, 16, 16)
+
+[node name="Fern_008" type="Sprite2D" parent="Decorations"]
+position = Vector2(848, 48)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(208, 0, 16, 16)
+
+[node name="Fern_009" type="Sprite2D" parent="Decorations"]
+position = Vector2(896, 48)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(208, 0, 16, 16)
+
+[node name="Fern_010" type="Sprite2D" parent="Decorations"]
+position = Vector2(976, 32)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(208, 0, 16, 16)
+
+[node name="Fern_011" type="Sprite2D" parent="Decorations"]
+position = Vector2(1168, 0)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(208, 0, 16, 16)
+
+[node name="Crate_012" type="Sprite2D" parent="Decorations"]
+position = Vector2(192, 16)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(112, 32, 32, 32)
+
+[node name="Crate_013" type="Sprite2D" parent="Decorations"]
+position = Vector2(384, 16)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(112, 32, 32, 32)
+
+[node name="Crate_014" type="Sprite2D" parent="Decorations"]
+position = Vector2(816, 32)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(112, 32, 32, 32)
+
+[node name="Timber_015" type="Sprite2D" parent="Decorations"]
+position = Vector2(96, 160)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 96, 16, 16)
+
+[node name="Timber_016" type="Sprite2D" parent="Decorations"]
+position = Vector2(112, 160)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 96, 16, 16)
+
+[node name="Timber_017" type="Sprite2D" parent="Decorations"]
+position = Vector2(128, 160)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 96, 16, 16)
+
+[node name="Timber_018" type="Sprite2D" parent="Decorations"]
+position = Vector2(144, 160)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 96, 16, 16)
+
+[node name="Timber_019" type="Sprite2D" parent="Decorations"]
+position = Vector2(160, 160)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 96, 16, 16)
+
+[node name="Timber_020" type="Sprite2D" parent="Decorations"]
+position = Vector2(176, 160)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 96, 16, 16)
+
+[node name="Timber_021" type="Sprite2D" parent="Decorations"]
+position = Vector2(192, 160)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 96, 16, 16)
+
+[node name="Timber_022" type="Sprite2D" parent="Decorations"]
+position = Vector2(208, 160)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 96, 16, 16)
+
+[node name="Timber_023" type="Sprite2D" parent="Decorations"]
+position = Vector2(224, 160)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 96, 16, 16)
+
+[node name="Timber_024" type="Sprite2D" parent="Decorations"]
+position = Vector2(240, 160)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 96, 16, 16)
+
+[node name="Support_025" type="Sprite2D" parent="Decorations"]
+position = Vector2(96, 176)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(144, 80, 16, 16)
+
+[node name="Support_026" type="Sprite2D" parent="Decorations"]
+position = Vector2(96, 192)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(144, 80, 16, 16)
+
+[node name="Support_027" type="Sprite2D" parent="Decorations"]
+position = Vector2(96, 208)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(144, 80, 16, 16)
+
+[node name="Support_028" type="Sprite2D" parent="Decorations"]
+position = Vector2(240, 176)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(144, 80, 16, 16)
+
+[node name="Support_029" type="Sprite2D" parent="Decorations"]
+position = Vector2(240, 192)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(144, 80, 16, 16)
+
+[node name="Support_030" type="Sprite2D" parent="Decorations"]
+position = Vector2(240, 208)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(144, 80, 16, 16)
+
+[node name="Timber_031" type="Sprite2D" parent="Decorations"]
+position = Vector2(256, 208)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 96, 16, 16)
+
+[node name="Timber_032" type="Sprite2D" parent="Decorations"]
+position = Vector2(272, 208)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 96, 16, 16)
+
+[node name="Timber_033" type="Sprite2D" parent="Decorations"]
+position = Vector2(288, 208)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 96, 16, 16)
+
+[node name="Timber_034" type="Sprite2D" parent="Decorations"]
+position = Vector2(304, 208)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 96, 16, 16)
+
+[node name="Timber_035" type="Sprite2D" parent="Decorations"]
+position = Vector2(320, 208)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 96, 16, 16)
+
+[node name="Timber_036" type="Sprite2D" parent="Decorations"]
+position = Vector2(336, 208)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 96, 16, 16)
+
+[node name="Support_037" type="Sprite2D" parent="Decorations"]
+position = Vector2(320, 224)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(144, 80, 16, 16)
+
+[node name="Support_038" type="Sprite2D" parent="Decorations"]
+position = Vector2(320, 240)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(144, 80, 16, 16)
+
+[node name="RopeBridge_039" type="Sprite2D" parent="Decorations"]
+position = Vector2(160, 146)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(80, 64, 64, 16)
+
+[node name="HangingRope_040" type="Sprite2D" parent="Decorations"]
+position = Vector2(272, 96)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(144, 48, 48, 32)
+
+[node name="Crate_041" type="Sprite2D" parent="Decorations"]
+position = Vector2(112, 128)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(112, 32, 32, 32)
+
+[node name="Crate_042" type="Sprite2D" parent="Decorations"]
+position = Vector2(304, 176)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(112, 32, 32, 32)
+
+[node name="Mushrooms_043" type="Sprite2D" parent="Decorations"]
+position = Vector2(80, 192)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(272, 32, 32, 32)
+
+[node name="Mushrooms_044" type="Sprite2D" parent="Decorations"]
+position = Vector2(336, 176)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(272, 32, 32, 32)
+
+[node name="Timber_045" type="Sprite2D" parent="Decorations"]
+position = Vector2(608, 160)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 96, 16, 16)
+
+[node name="Timber_046" type="Sprite2D" parent="Decorations"]
+position = Vector2(624, 160)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 96, 16, 16)
+
+[node name="Timber_047" type="Sprite2D" parent="Decorations"]
+position = Vector2(640, 160)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 96, 16, 16)
+
+[node name="Timber_048" type="Sprite2D" parent="Decorations"]
+position = Vector2(656, 160)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 96, 16, 16)
+
+[node name="Timber_049" type="Sprite2D" parent="Decorations"]
+position = Vector2(672, 160)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 96, 16, 16)
+
+[node name="Timber_050" type="Sprite2D" parent="Decorations"]
+position = Vector2(688, 160)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 96, 16, 16)
+
+[node name="Timber_051" type="Sprite2D" parent="Decorations"]
+position = Vector2(704, 160)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 96, 16, 16)
+
+[node name="Timber_052" type="Sprite2D" parent="Decorations"]
+position = Vector2(720, 160)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 96, 16, 16)
+
+[node name="Timber_053" type="Sprite2D" parent="Decorations"]
+position = Vector2(736, 160)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 96, 16, 16)
+
+[node name="Support_054" type="Sprite2D" parent="Decorations"]
+position = Vector2(624, 176)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(144, 80, 16, 16)
+
+[node name="Support_055" type="Sprite2D" parent="Decorations"]
+position = Vector2(624, 192)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(144, 80, 16, 16)
+
+[node name="Support_056" type="Sprite2D" parent="Decorations"]
+position = Vector2(720, 176)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(144, 80, 16, 16)
+
+[node name="Support_057" type="Sprite2D" parent="Decorations"]
+position = Vector2(720, 192)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(144, 80, 16, 16)
+
+[node name="Timber_058" type="Sprite2D" parent="Decorations"]
+position = Vector2(832, 144)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 96, 16, 16)
+
+[node name="Timber_059" type="Sprite2D" parent="Decorations"]
+position = Vector2(848, 144)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 96, 16, 16)
+
+[node name="Timber_060" type="Sprite2D" parent="Decorations"]
+position = Vector2(864, 144)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 96, 16, 16)
+
+[node name="Timber_061" type="Sprite2D" parent="Decorations"]
+position = Vector2(880, 144)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 96, 16, 16)
+
+[node name="Timber_062" type="Sprite2D" parent="Decorations"]
+position = Vector2(896, 144)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 96, 16, 16)
+
+[node name="Timber_063" type="Sprite2D" parent="Decorations"]
+position = Vector2(912, 144)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 96, 16, 16)
+
+[node name="Timber_064" type="Sprite2D" parent="Decorations"]
+position = Vector2(928, 144)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 96, 16, 16)
+
+[node name="Timber_065" type="Sprite2D" parent="Decorations"]
+position = Vector2(944, 144)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 96, 16, 16)
+
+[node name="Timber_066" type="Sprite2D" parent="Decorations"]
+position = Vector2(960, 144)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 96, 16, 16)
+
+[node name="Support_067" type="Sprite2D" parent="Decorations"]
+position = Vector2(848, 160)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(144, 80, 16, 16)
+
+[node name="Support_068" type="Sprite2D" parent="Decorations"]
+position = Vector2(848, 176)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(144, 80, 16, 16)
+
+[node name="Support_069" type="Sprite2D" parent="Decorations"]
+position = Vector2(944, 160)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(144, 80, 16, 16)
+
+[node name="HangingRope_070" type="Sprite2D" parent="Decorations"]
+position = Vector2(768, 96)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(144, 48, 48, 32)
+
+[node name="Crate_071" type="Sprite2D" parent="Decorations"]
+position = Vector2(640, 128)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(112, 32, 32, 32)
+
+[node name="Crate_072" type="Sprite2D" parent="Decorations"]
+position = Vector2(896, 112)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(112, 32, 32, 32)
+
+[node name="Mushrooms_073" type="Sprite2D" parent="Decorations"]
+position = Vector2(592, 160)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(272, 32, 32, 32)
+
+[node name="Mushrooms_074" type="Sprite2D" parent="Decorations"]
+position = Vector2(960, 144)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(272, 32, 32, 32)
+
+[node name="NotchBridge_075" type="Sprite2D" parent="Decorations"]
+position = Vector2(432, 192)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(80, 64, 64, 16)
+
+[node name="NotchBridge_076" type="Sprite2D" parent="Decorations"]
+position = Vector2(480, 192)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(80, 64, 64, 16)
+
+[node name="Timber_077" type="Sprite2D" parent="Decorations"]
+position = Vector2(1184, 112)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 96, 16, 16)
+
+[node name="Timber_078" type="Sprite2D" parent="Decorations"]
+position = Vector2(1200, 112)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 96, 16, 16)
+
+[node name="Timber_079" type="Sprite2D" parent="Decorations"]
+position = Vector2(1216, 112)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 96, 16, 16)
+
+[node name="Timber_080" type="Sprite2D" parent="Decorations"]
+position = Vector2(1232, 112)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 96, 16, 16)
+
+[node name="Timber_081" type="Sprite2D" parent="Decorations"]
+position = Vector2(1248, 112)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 96, 16, 16)
+
+[node name="Timber_082" type="Sprite2D" parent="Decorations"]
+position = Vector2(1264, 112)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 96, 16, 16)
+
+[node name="Timber_083" type="Sprite2D" parent="Decorations"]
+position = Vector2(1280, 112)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 96, 16, 16)
+
+[node name="Timber_084" type="Sprite2D" parent="Decorations"]
+position = Vector2(1296, 112)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 96, 16, 16)
+
+[node name="Timber_085" type="Sprite2D" parent="Decorations"]
+position = Vector2(1312, 112)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 96, 16, 16)
+
+[node name="Support_086" type="Sprite2D" parent="Decorations"]
+position = Vector2(1200, 128)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(144, 80, 16, 16)
+
+[node name="Support_087" type="Sprite2D" parent="Decorations"]
+position = Vector2(1200, 144)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(144, 80, 16, 16)
+
+[node name="Support_088" type="Sprite2D" parent="Decorations"]
+position = Vector2(1296, 128)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(144, 80, 16, 16)
+
+[node name="Support_089" type="Sprite2D" parent="Decorations"]
+position = Vector2(1296, 144)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(144, 80, 16, 16)
+
+[node name="Crate_090" type="Sprite2D" parent="Decorations"]
+position = Vector2(1232, 80)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(112, 32, 32, 32)
+
+[node name="Mushrooms_091" type="Sprite2D" parent="Decorations"]
+position = Vector2(1312, 96)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(272, 32, 32, 32)
+
+[node name="Vine_092" type="Sprite2D" parent="Decorations"]
+position = Vector2(32, 128)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(256, 0, 16, 32)
+
+[node name="Vine_093" type="Sprite2D" parent="Decorations"]
+position = Vector2(384, 224)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(256, 0, 16, 32)
+
+[node name="Vine_094" type="Sprite2D" parent="Decorations"]
+position = Vector2(496, 208)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(256, 0, 16, 32)
+
+[node name="Vine_095" type="Sprite2D" parent="Decorations"]
+position = Vector2(560, 64)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(256, 0, 16, 32)
+
+[node name="Vine_096" type="Sprite2D" parent="Decorations"]
+position = Vector2(1024, 96)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(256, 0, 16, 32)
+
+[node name="Vine_097" type="Sprite2D" parent="Decorations"]
+position = Vector2(1120, 80)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(256, 0, 16, 32)

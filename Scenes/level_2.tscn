@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://bai503t3ibhvg"]
+[gd_scene format=3 uid="uid://bai503t3ibhvg"]
 
 [ext_resource type="LabelSettings" uid="uid://bdn32us3ujmv5" path="res://Assets/Fonts/Label-settings.tres" id="2_1q6tm"]
 [ext_resource type="PackedScene" uid="uid://bb6oqyywhh4e5" path="res://Scenes/parallax_background.tscn" id="2_12fag"]
@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" path="res://Scenes/portal.tscn" id="7_055b2"]
 [ext_resource type="PackedScene" uid="uid://wchxkvjrn837" path="res://Scenes/bouton.tscn" id="8_2mgoq"]
 [ext_resource type="Script" uid="uid://bw3sgj4xk2tbd" path="res://Scripts/button_laser.gd" id="9_uhnj4"]
+
+[ext_resource type="PackedScene" path="res://front end/game_hud.tscn" id="10_hud"]
 
 [node name="Level2" type="Node2D" unique_id=637250006]
 
@@ -57,3 +59,5 @@ move_time = 5.0
 target_laser = NodePath("../Laser/laser")
 
 [editable path="Laser"]
+
+[node name="GameHUD" parent="." instance=ExtResource("10_hud")]

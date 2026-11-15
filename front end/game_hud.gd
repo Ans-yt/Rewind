@@ -51,8 +51,13 @@ func show_settings() -> void:
 	get_tree().root.add_child(settings)
 
 func restart_level() -> void:
-	var click := $ClickSound
-	click.reparent(get_tree().root)
+	get_tree().paused = false
+	var click := $ClickSound.duplicate()
+	get_tree().root.add_child(click)
 	click.finished.connect(click.queue_free)
 	click.play()
-	get_tree().reload_current_scene()
+	var main := get_tree().current_scene
+	if main.has_method("restart_level"):
+		main.restart_level()
+	else:
+		get_tree().reload_current_scene()

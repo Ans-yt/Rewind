@@ -1,0 +1,71 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Level3/Map.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://Scenes/character_body_2d.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://Scenes/wizard.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://Scenes/portal.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://front end/game_hud.tscn" id="5"]
+[ext_resource type="Script" path="res://Scripts/level_3.gd" id="6"]
+[ext_resource type="Script" path="res://Scripts/level_3_warden.gd" id="7"]
+[ext_resource type="PackedScene" path="res://Scenes/player_sounds.tscn" id="8"]
+
+[node name="Level3" type="Node2D"]
+texture_filter = 1
+script = ExtResource("6")
+
+[node name="Map" parent="." instance=ExtResource("1")]
+scale = Vector2(2, 2)
+
+[node name="TilemapSol" type="TileMapLayer" parent="."]
+
+[node name="Player" parent="." instance=ExtResource("2")]
+position = Vector2(272, 31)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(100, 12)
+zoom = Vector2(1.5, 1.5)
+position_smoothing_enabled = true
+position_smoothing_speed = 8.0
+limit_left = 0
+limit_right = 2752
+limit_top = -220
+limit_bottom = 850
+
+[node name="PlayerSounds" parent="Player" instance=ExtResource("8")]
+
+[node name="Portal" parent="." instance=ExtResource("4")]
+position = Vector2(2660, -32)
+
+[node name="GameHUD" parent="." instance=ExtResource("5")]
+
+[node name="TimeWarden1" parent="." instance=ExtResource("3")]
+position = Vector2(600, 72)
+script = ExtResource("7")
+speed = 36.0
+patrol_distance = 56.0
+detection_radius = 210.0
+attack_range = 115.0
+
+[node name="TimeWarden2" parent="." instance=ExtResource("3")]
+position = Vector2(1460, 72)
+script = ExtResource("7")
+speed = 36.0
+patrol_distance = 56.0
+detection_radius = 210.0
+attack_range = 115.0
+
+[node name="TimeWarden3" parent="." instance=ExtResource("3")]
+position = Vector2(1910, 72)
+script = ExtResource("7")
+speed = 36.0
+patrol_distance = 56.0
+detection_radius = 210.0
+attack_range = 115.0
+
+[node name="TimeWarden4" parent="." instance=ExtResource("3")]
+position = Vector2(2480, -24)
+script = ExtResource("7")
+speed = 36.0
+patrol_distance = 56.0
+detection_radius = 210.0
+attack_range = 115.0

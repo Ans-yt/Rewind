@@ -1,7 +1,7 @@
 extends Node
 
 @onready var player = get_parent()
-@onready var tiles: TileMapLayer = player.get_parent().get_node("TilemapSol")
+@onready var tiles: TileMapLayer = player.get_parent().get_node_or_null("TilemapSol")
 
 var was_rewinding := false
 var was_on_floor := false
@@ -26,7 +26,9 @@ func _physics_process(delta: float) -> void:
 			$RewindEnd.play()
 	var on_floor: bool = player.is_on_floor()
 	var feet: Vector2 = player.get_node("CollisionShape2D").global_position + Vector2(0, 16)
-	var tile := tiles.get_cell_atlas_coords(tiles.local_to_map(tiles.to_local(feet)))
+	var tile := Vector2i(-1, -1)
+	if is_instance_valid(tiles) and tiles.tile_set != null:
+		tile = tiles.get_cell_atlas_coords(tiles.local_to_map(tiles.to_local(feet)))
 	var in_water := tile == Vector2i(9, 2) or tile == Vector2i(10, 2)
 	if not rewinding:
 		if in_water and not was_in_water and not Input.is_action_pressed("Respawn"):

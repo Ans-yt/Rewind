@@ -27,5 +27,9 @@ func _on_body_entered(body: Node2D) -> void:
 		#body.resp			_collision_shape.set_deferred("disabled", false)awn()
 		#sprite.visible = false
 		#collision.set_deferred("disabled", true)  # Et ici
-		get_tree().reload_current_scene()
+		var main := get_tree().current_scene
+		if main.has_method("restart_level"):
+			main.call_deferred("restart_level")
+		else:
+			get_tree().reload_current_scene()
 		#leave_screen("res://Scenes/level_2.tscn")
