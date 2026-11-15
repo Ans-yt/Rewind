@@ -21,6 +21,7 @@ var was_attacking := false
 var sound_fade: Tween
 
 func _ready() -> void:
+	add_to_group("Wizards")
 	start_x = global_position.x
 	player = get_parent().get_node_or_null("Player")
 	$CastSound.stream.loop_mode = AudioStreamWAV.LOOP_FORWARD

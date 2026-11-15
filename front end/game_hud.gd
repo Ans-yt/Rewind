@@ -10,13 +10,13 @@ var labels := ["Jump", "Left", "Right", "Rewind", "Dash"]
 var key_regions := [Rect2(16, 112, 16, 16), Rect2(48, 112, 16, 16), Rect2(64, 112, 16, 16), Rect2(0, 112, 16, 16), Rect2(80, 96, 16, 16)]
 
 func _ready() -> void:
+	preload("res://front end/music.gd").start(get_tree())
 	panel.texture = WOOD
 	panel.region_rect = Rect2(448, 640, 96, 96)
 	for side in [SIDE_LEFT, SIDE_TOP, SIDE_RIGHT, SIDE_BOTTOM]:
 		panel.set_texture_margin(side, 8)
-	$Settings.pressed.connect(show_settings_notice)
+	$Settings.pressed.connect(show_settings)
 	$Restart.pressed.connect(restart_level)
-	$NoticeTimer.timeout.connect($Notice.hide)
 	resized.connect(queue_redraw)
 	tutorial_font.antialiasing = TextServer.FONT_ANTIALIASING_NONE
 	tutorial_font.subpixel_positioning = TextServer.SUBPIXEL_POSITIONING_DISABLED
@@ -45,10 +45,10 @@ func draw_label(point: Vector2, text: String, font_size: int) -> void:
 	draw_string_outline(FONT, point, text, HORIZONTAL_ALIGNMENT_LEFT, -1, font_size, 3, Color("30201c"))
 	draw_string(FONT, point, text, HORIZONTAL_ALIGNMENT_LEFT, -1, font_size, Color("fff0c4"))
 
-func show_settings_notice() -> void:
+func show_settings() -> void:
 	$ClickSound.play()
-	$Notice.show()
-	$NoticeTimer.start()
+	var settings := preload("res://front end/audio_settings.tscn").instantiate()
+	get_tree().root.add_child(settings)
 
 func restart_level() -> void:
 	var click := $ClickSound

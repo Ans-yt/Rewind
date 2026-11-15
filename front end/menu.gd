@@ -21,6 +21,7 @@ var notice := ""
 var labels := ["TUTORIAL", "PLAY", "SETTINGS"] # le boutton tuto il sert a r mais boonn
 
 func _ready() -> void:
+	preload("res://front end/music.gd").start(get_tree())
 	texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
 	mouse_filter = Control.MOUSE_FILTER_STOP
 	resized.connect(update_menu_layout)
@@ -128,9 +129,9 @@ func draw_intro() -> void:
 		draw_rect(Rect2(Vector2.ZERO, size), Color(0.0, 0.0, 0.0, clampf((play_time - 3.0) / 0.4, 0.0, 1.0)))
 
 func _gui_input(event: InputEvent) -> void:
-	if play_time >= 0.0:
+	if play_time >= 0.0 or not event is InputEventMouse:
 		return
-	var pointer := (get_local_mouse_position() - menu_offset) / menu_scale
+	var pointer: Vector2 = (event.position - menu_offset) / menu_scale
 	var hovered := -1
 	for i in range(3):
 		if Rect2(442, [240, 332, 432][i], 305, 65).has_point(pointer):
@@ -142,6 +143,9 @@ func _gui_input(event: InputEvent) -> void:
 		$ClickSound.play()
 		if hovered == 1:
 			start_play()
+		elif hovered == 2:
+			var settings := preload("res://front end/audio_settings.tscn").instantiate()
+			get_tree().root.add_child(settings)
 		else:
 			notice = "Disponible plus tard"
 			queue_redraw()

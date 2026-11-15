@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" path="res://Scenes/wizard.tscn" id="9_5nvdp"]
 [ext_resource type="PackedScene" path="res://front end/game_hud.tscn" id="10_hud"]
 [ext_resource type="PackedScene" path="res://Scenes/player_sounds.tscn" id="11_audio"]
+[ext_resource type="PackedScene" path="res://Scenes/portal.tscn" id="12_portal"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_tboqv"]
 
@@ -621,3 +622,6 @@ horizontal_alignment = 1
 [node name="GameHUD" parent="." instance=ExtResource("10_hud")]
 
 [node name="PlayerSounds" parent="Player" instance=ExtResource("11_audio")]
+
+[node name="Portal" parent="." instance=ExtResource("12_portal")]
+position = Vector2(3602, 134.5)

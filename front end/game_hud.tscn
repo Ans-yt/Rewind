@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3]
+[gd_scene load_steps=10 format=3]
 
 [ext_resource type="Script" path="res://front end/game_hud.gd" id="1"]
 [ext_resource type="Texture2D" path="res://front end/assets/wooden_ui.png" id="2"]
 [ext_resource type="Texture2D" path="res://front end/assets/logo.png" id="3"]
 [ext_resource type="AudioStream" path="res://sfx/ui-button-press.mp3" id="4_click"]
+[ext_resource type="PackedScene" path="res://front end/level_timer.tscn" id="5_timer"]
 
 [sub_resource type="AtlasTexture" id="SettingsNormal"]
 atlas = ExtResource("2")
@@ -77,24 +78,9 @@ texture = ExtResource("3")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Notice" type="Label" parent="Interface"]
-visible = false
-anchors_preset = 10
-anchor_right = 1.0
-offset_top = 20.0
-offset_bottom = 52.0
-mouse_filter = 2
-theme_override_colors/font_color = Color(1, 0.941, 0.769, 1)
-theme_override_colors/font_outline_color = Color(0.188, 0.125, 0.11, 1)
-theme_override_constants/outline_size = 6
-theme_override_font_sizes/font_size = 18
-text = "Settings will be available later"
-horizontal_alignment = 1
-
-[node name="NoticeTimer" type="Timer" parent="Interface"]
-wait_time = 2.5
-one_shot = true
-
 [node name="ClickSound" type="AudioStreamPlayer" parent="Interface"]
+process_mode = 3
 stream = ExtResource("4_click")
 volume_db = -18.0
+
+[node name="LevelTimer" parent="Interface" instance=ExtResource("5_timer")]
