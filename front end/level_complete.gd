@@ -20,7 +20,7 @@ func show_next_level() -> void:
 	
 
 func replay_level() -> void:
-	leave_screen("res://rewind.ts-1cn")
+	leave_screen("res://rewind.tscn")
 
 func return_to_menu() -> void:
 	leave_screen("res://front end/menu.tscn")

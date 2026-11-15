@@ -20,15 +20,15 @@ func _ready() -> void:
 	resized.connect(queue_redraw)
 	tutorial_font.antialiasing = TextServer.FONT_ANTIALIASING_NONE
 	tutorial_font.subpixel_positioning = TextServer.SUBPIXEL_POSITIONING_DISABLED
-	var level := get_parent().get_parent()
-	for label_name in ["tuto1", "tuto2", "tuto3", "tuto4"]:
-		var label: Label = level.get_node(label_name)
-		var settings: LabelSettings = label.label_settings.duplicate()
-		settings.font = tutorial_font
-		settings.font_color = Color.WHITE
-		settings.outline_color = Color.BLACK
-		settings.outline_size = 8
-		label.label_settings = settings
+	#var level := get_parent().get_parent()
+	#for label_name in ["tuto1", "tuto2", "tuto3", "tuto4"]:
+		#var label: Label = level.get_node(label_name)
+		#var settings: LabelSettings = label.label_settings.duplicate()
+		#settings.font = tutorial_font
+		#settings.font_color = Color.WHITE
+		#settings.outline_color = Color.BLACK
+		#settings.outline_size = 8
+		#label.label_settings = settings
 
 func _draw() -> void:
 	var top := size.y - 214.0
