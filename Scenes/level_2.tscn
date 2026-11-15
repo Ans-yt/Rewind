@@ -23,7 +23,7 @@ scale = Vector2(0.19341213, 0.19341213)
 text = "Can you solve this puzzle ?"
 label_settings = ExtResource("2_1q6tm")
 
-[node name="Player" parent="." unique_id=1451499981 instance=ExtResource("2_smnlx")]
+[node name="Player" parent="." unique_id=1451499981 groups=["Player"] instance=ExtResource("2_smnlx")]
 position = Vector2(-19, 56)
 
 [node name="s2" type="Camera2D" parent="Player" unique_id=1972154329]

@@ -1,19 +1,31 @@
 [gd_scene format=3 uid="uid://doylw8uqffi7s"]
 
-[ext_resource type="PackedScene" uid="uid://wv331ir5bo01" path="res://Scenes/level_1.tscn" id="1_tboqv"]
-[ext_resource type="PackedScene" uid="uid://bai503t3ibhvg" path="res://Scenes/level_2.tscn" id="2_7qrdq"]
+[ext_resource type="Script" uid="uid://cfq5ncq3284d6" path="res://rewind.gd" id="1_tboqv"]
 [ext_resource type="PackedScene" uid="uid://bb6oqyywhh4e5" path="res://Scenes/parallax_background.tscn" id="2_juu6c"]
 [ext_resource type="PackedScene" path="res://front end/game_hud.tscn" id="10_hud"]
 
 [node name="Node2D" type="Node2D" unique_id=309383918]
-
-[node name="level_1" parent="." unique_id=460230093 instance=ExtResource("1_tboqv")]
-
-[node name="Level2" parent="." unique_id=637250006 instance=ExtResource("2_7qrdq")]
-visible = false
+script = ExtResource("1_tboqv")
 
 [node name="ParallaxBackground" parent="." unique_id=95441565 instance=ExtResource("2_juu6c")]
 position = Vector2(258, 144)
 metadata/_edit_lock_ = true
 
 [node name="GameHUD" parent="." unique_id=758256780 instance=ExtResource("10_hud")]
+
+[node name="Settings" parent="GameHUD/Interface" index="0"]
+layout_mode = 0
+
+[node name="Restart" parent="GameHUD/Interface" index="1"]
+layout_mode = 0
+
+[node name="Logo" parent="GameHUD/Interface" index="2"]
+layout_mode = 0
+anchors_preset = 0
+
+[node name="LevelTimer" parent="GameHUD/Interface" index="4"]
+layout_mode = 1
+
+[node name="LevelContainer" type="Node2D" parent="." unique_id=365812894]
+
+[editable path="GameHUD"]
