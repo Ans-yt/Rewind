@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dck66y2xap2kw"]
 
 [ext_resource type="Script" uid="uid://d263n64cqis02" path="res://front end/menu.gd" id="1"]
+[ext_resource type="AudioStream" path="res://sfx/ui-button-press.mp3" id="2_click"]
 
 [node name="Menu" type="Control" unique_id=1404878211]
 layout_mode = 3
@@ -10,3 +11,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1")
+
+[node name="ClickSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_click")
+volume_db = -18.0

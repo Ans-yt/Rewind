@@ -17,10 +17,14 @@ var direction := 1.0
 var float_time := 0.0
 var attack_time := 0.0
 var attacking := false
+var was_attacking := false
+var sound_fade: Tween
 
 func _ready() -> void:
 	start_x = global_position.x
 	player = get_parent().get_node_or_null("Player")
+	$CastSound.stream.loop_mode = AudioStreamWAV.LOOP_FORWARD
+	$CastSound.stream.loop_end = int($CastSound.stream.get_length() * $CastSound.stream.mix_rate)
 
 func _physics_process(delta: float) -> void:
 	float_time += delta
@@ -59,3 +63,16 @@ func _physics_process(delta: float) -> void:
 	time_icon.position = Vector2(direction * 38.0, sprite.position.y)
 	if time_icon.visible:
 		time_icon.rotation_degrees += icon_spin_speed * delta
+	if attacking != was_attacking:
+		if is_instance_valid(sound_fade):
+			sound_fade.kill()
+		sound_fade = create_tween()
+		if attacking:
+			if not $CastSound.playing:
+				$CastSound.volume_db = -60.0
+				$CastSound.play()
+			sound_fade.tween_property($CastSound, "volume_db", -14.0, 0.12)
+		else:
+			sound_fade.tween_property($CastSound, "volume_db", -60.0, 0.18)
+			sound_fade.tween_callback($CastSound.stop)
+	was_attacking = attacking

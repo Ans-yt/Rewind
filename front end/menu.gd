@@ -139,6 +139,7 @@ func _gui_input(event: InputEvent) -> void:
 		selected = hovered
 		queue_redraw()
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed and hovered >= 0:
+		$ClickSound.play()
 		if hovered == 1:
 			start_play()
 		else:

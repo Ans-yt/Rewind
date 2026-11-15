@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c7wpfgf42enn" path="res://Assets/Sprites/wizard.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://5mybhbltiiya" path="res://Assets/Sprites/time_icon.png" id="3"]
 [ext_resource type="Shader" uid="uid://2wxv0c2653ic" path="res://Scripts/wizard_background.gdshader" id="4"]
+[ext_resource type="AudioStream" path="res://sfx/processed/wizard_cast.wav" id="5_sound"]
 
 [sub_resource type="ShaderMaterial" id="TransparentBackground"]
 shader = ExtResource("4")
@@ -38,3 +39,7 @@ scale = Vector2(0.025, 0.025)
 texture = ExtResource("3")
 region_enabled = true
 region_rect = Rect2(40, 33, 253, 253)
+
+[node name="CastSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_sound")
+volume_db = -60.0

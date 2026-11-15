@@ -46,8 +46,13 @@ func draw_label(point: Vector2, text: String, font_size: int) -> void:
 	draw_string(FONT, point, text, HORIZONTAL_ALIGNMENT_LEFT, -1, font_size, Color("fff0c4"))
 
 func show_settings_notice() -> void:
+	$ClickSound.play()
 	$Notice.show()
 	$NoticeTimer.start()
 
 func restart_level() -> void:
+	var click := $ClickSound
+	click.reparent(get_tree().root)
+	click.finished.connect(click.queue_free)
+	click.play()
 	get_tree().reload_current_scene()

@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3]
+[gd_scene load_steps=9 format=3]
 
 [ext_resource type="Script" path="res://front end/game_hud.gd" id="1"]
 [ext_resource type="Texture2D" path="res://front end/assets/wooden_ui.png" id="2"]
 [ext_resource type="Texture2D" path="res://front end/assets/logo.png" id="3"]
+[ext_resource type="AudioStream" path="res://sfx/ui-button-press.mp3" id="4_click"]
 
 [sub_resource type="AtlasTexture" id="SettingsNormal"]
 atlas = ExtResource("2")
@@ -93,3 +94,7 @@ horizontal_alignment = 1
 [node name="NoticeTimer" type="Timer" parent="Interface"]
 wait_time = 2.5
 one_shot = true
+
+[node name="ClickSound" type="AudioStreamPlayer" parent="Interface"]
+stream = ExtResource("4_click")
+volume_db = -18.0
