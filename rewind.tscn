@@ -9,7 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://brgeec1f0syyh" path="res://Assets/Sprites/Sprite-bouton-anime1.png" id="7_5nvdp"]
 [ext_resource type="Texture2D" uid="uid://bkuvws5xqfhao" path="res://Assets/Sprites/Sprite-bouton-anime2.png" id="8_3x21c"]
 [ext_resource type="LabelSettings" uid="uid://bdn32us3ujmv5" path="res://Assets/Fonts/Label-settings.tres" id="9_3x21c"]
-[ext_resource type="PackedScene" uid="uid://bk1m732e2q4lp" path="res://Scenes/ennemi_1.tscn" id="9_5nvdp"]
+[ext_resource type="PackedScene" path="res://Scenes/wizard.tscn" id="9_5nvdp"]
+[ext_resource type="PackedScene" path="res://front end/game_hud.tscn" id="10_hud"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_tboqv"]
 
@@ -615,3 +616,5 @@ text = "Use  [< >] to move
 and [arrow UP] to jump"
 label_settings = ExtResource("9_3x21c")
 horizontal_alignment = 1
+
+[node name="GameHUD" parent="." instance=ExtResource("10_hud")]

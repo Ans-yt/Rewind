@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dck66y2xap2kw"]
+
+[ext_resource type="Script" uid="uid://d263n64cqis02" path="res://front end/menu.gd" id="1"]
+
+[node name="Menu" type="Control" unique_id=1404878211]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")

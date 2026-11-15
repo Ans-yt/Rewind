@@ -1,0 +1,95 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://front end/game_hud.gd" id="1"]
+[ext_resource type="Texture2D" path="res://front end/assets/wooden_ui.png" id="2"]
+[ext_resource type="Texture2D" path="res://front end/assets/logo.png" id="3"]
+
+[sub_resource type="AtlasTexture" id="SettingsNormal"]
+atlas = ExtResource("2")
+region = Rect2(288, 576, 32, 32)
+
+[sub_resource type="AtlasTexture" id="SettingsPressed"]
+atlas = ExtResource("2")
+region = Rect2(288, 608, 32, 32)
+
+[sub_resource type="AtlasTexture" id="RestartNormal"]
+atlas = ExtResource("2")
+region = Rect2(384, 640, 32, 32)
+
+[sub_resource type="AtlasTexture" id="RestartPressed"]
+atlas = ExtResource("2")
+region = Rect2(384, 672, 32, 32)
+
+[node name="GameHUD" type="CanvasLayer"]
+layer = 10
+
+[node name="Interface" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture_filter = 1
+script = ExtResource("1")
+
+[node name="Settings" type="TextureButton" parent="Interface"]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 56.0
+offset_bottom = 56.0
+tooltip_text = "Settings"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+texture_normal = SubResource("SettingsNormal")
+texture_pressed = SubResource("SettingsPressed")
+texture_hover = SubResource("SettingsPressed")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Restart" type="TextureButton" parent="Interface"]
+offset_left = 64.0
+offset_top = 16.0
+offset_right = 104.0
+offset_bottom = 56.0
+tooltip_text = "Restart level"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+texture_normal = SubResource("RestartNormal")
+texture_pressed = SubResource("RestartPressed")
+texture_hover = SubResource("RestartPressed")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Logo" type="TextureRect" parent="Interface"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -80.0
+offset_top = 8.0
+offset_right = -16.0
+offset_bottom = 72.0
+grow_horizontal = 0
+mouse_filter = 2
+texture = ExtResource("3")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Notice" type="Label" parent="Interface"]
+visible = false
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 20.0
+offset_bottom = 52.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0.941, 0.769, 1)
+theme_override_colors/font_outline_color = Color(0.188, 0.125, 0.11, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 18
+text = "Settings will be available later"
+horizontal_alignment = 1
+
+[node name="NoticeTimer" type="Timer" parent="Interface"]
+wait_time = 2.5
+one_shot = true

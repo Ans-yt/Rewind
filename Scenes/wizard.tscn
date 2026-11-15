@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://cdgsn0b0sirrw"]
+
+[ext_resource type="Script" uid="uid://b1t88hdiutpsl" path="res://Scripts/wizard.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://c7wpfgf42enn" path="res://Assets/Sprites/wizard.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://5mybhbltiiya" path="res://Assets/Sprites/time_icon.png" id="3"]
+[ext_resource type="Shader" uid="uid://2wxv0c2653ic" path="res://Scripts/wizard_background.gdshader" id="4"]
+
+[sub_resource type="ShaderMaterial" id="TransparentBackground"]
+shader = ExtResource("4")
+
+[sub_resource type="CapsuleShape2D" id="Body"]
+radius = 11.0
+height = 48.0
+
+[node name="Ennemi1" type="CharacterBody2D" unique_id=95287291]
+texture_filter = 1
+script = ExtResource("1")
+icon_spin_speed = 40.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=336730343]
+material = SubResource("TransparentBackground")
+position = Vector2(0, -8)
+texture = ExtResource("2")
+hframes = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=627804735]
+shape = SubResource("Body")
+
+[node name="FloorCheck" type="RayCast2D" parent="." unique_id=1938780434]
+position = Vector2(24, 0)
+target_position = Vector2(0, 44)
+
+[node name="TimeIcon" type="Sprite2D" parent="." unique_id=1192332190]
+visible = false
+texture_filter = 2
+position = Vector2(38, -8)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("3")
+region_enabled = true
+region_rect = Rect2(40, 33, 253, 253)
