@@ -1,6 +1,6 @@
+https://t0bio-0.itch.io/re-wind
+
 - - -
-
-
 
 ### <ins> Assets used </ins>
 
@@ -8,7 +8,9 @@
 
 **fonts** : Yoster Island by codeman38 (https://www.1001fonts.com/yoster-island-font.html)
 
-**tilesets** :
+**tilesets** : https://anokolisa.itch.io/basic-140-tiles-grassland-and-mines
+
+**parallax background** : https://harbingersolution.itch.io/grassy-meadow-parallax-background
 
 **mobs** : wizard sprite by Warren Clark (https://lionheart963.itch.io/wizard)
 
